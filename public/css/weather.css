@@ -1,0 +1,5 @@
+@import 'base.css';
+
+.wrap {width:100%; max-width:482px; height:100%; margin:auto; border:1px solid #999;}
+.tabs {border-bottom:1px solid #999;}
+.tabs > li {padding:0.75rem; width:50%; float:left; text-align:center;}

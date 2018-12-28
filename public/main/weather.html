@@ -7,17 +7,17 @@
 	<title>날씨앱 v1.0</title>
 	<link rel="stylesheet" href="../css/w3.css" type="text/css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/weather.css">
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="wrap">
-		<ul class="tabs">
+		<ul class="tabs clear">
 			<li>오늘의 날씨</li>
 			<li>5일간 날씨</li>
 		</ul>
-		<ul class="conts">
+		<ul class="conts daily">
 			<li>
 				<img class="wt_icon">
 			</li>
@@ -37,6 +37,9 @@
 					<span class="tit">위치</span>
 					<span class="wt_coord"></span>
 			</li>
+		</ul>
+		<ul class="conts weekly">
+			<li>주간날씨</li>
 		</ul>
 	</div>
 	<script src="../js/weather.js"></script>
