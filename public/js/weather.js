@@ -17,3 +17,22 @@ $.ajax({
 		log(xhr);
 	}
 });
+
+$(".tabs > li").click(function(){
+	var n = $(this).index();
+	$(".tabs > li").css({
+		"background-color":"#f8f8f8",
+		"border-bottom":"none",
+		"color":"#333",
+		"font-weight":"normal"
+	});
+	$(this).css({
+		"background-color":"#f60",
+		"border-bottom":"3px solid #390",
+		"color":"#fff",
+		"font-weight":"bold"
+	});
+	$(".conts").hide();
+	$(".conts").eq(n).show();
+});
+$(".tabs > li").eq(0).trigger("click");
