@@ -3,6 +3,13 @@
 .wrap {width:100%; max-width:482px; height:100%; margin:auto; border:1px solid #999;}
 .tabs {border-bottom:1px solid #999;}
 .tabs > li {padding:0.75rem; width:50%; float:left; text-align:center;}
-.conts {width:100%; position:absolute;}
+.wrap > div {width:100%; position:relative;}
+.conts {width:100%; position:absolute; font-size:1rem;}
 .daily {display:block;}
 .weekly {display:none;}
+
+
+.daily > :first-child {padding:2em; text-align:center;}
+.daily #wt_icon {width:50%;}
+.daily .tit {text-align:right; display:inline-block; width:30%; padding:1em;}
+.daily .cont {text-align:left; display:inline-block; width:60%; padding:1em;}

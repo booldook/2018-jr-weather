@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,37 +12,41 @@
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </head>
+
 <body>
 	<div class="wrap">
 		<ul class="tabs clear">
 			<li>오늘의 날씨</li>
 			<li>5일간 날씨</li>
 		</ul>
-		<ul class="conts daily">
-			<li>
-				<img class="wt_icon">
-			</li>
-			<li>
-				<span class="tit">날씨</span>
-				<span class="wt_main"></span>
-			</li>
-			<li>
+		<div>
+			<ul class="conts daily">
+				<li>
+					<img id="wt_icon">
+				</li>
+				<li>
+					<span class="tit">날씨</span>
+					<span id="wt_main" class="cont"></span>
+				</li>
+				<li>
 					<span class="tit">온도</span>
-					<span class="wt_temp"></span>
-			</li>
-			<li>
+					<span id="wt_temp" class="cont"></span>
+				</li>
+				<li>
 					<span class="tit">바람</span>
-					<span class="wt_wind"></span>
-			</li>
-			<li>
+					<span id="wt_wind" class="cont"></span>
+				</li>
+				<li>
 					<span class="tit">위치</span>
-					<span class="wt_coord"></span>
-			</li>
-		</ul>
-		<ul class="conts weekly">
-			<li>주간날씨</li>
-		</ul>
+					<span id="wt_coord" class="cont"></span>
+				</li>
+			</ul>
+			<ul class="conts weekly">
+				<li>주간날씨</li>
+			</ul>
+		</div>
 	</div>
 	<script src="../js/weather.js"></script>
 </body>
+
 </html>
