@@ -77,3 +77,7 @@ function weeklyFn(data) {
 	}
 }
 
+$(window).resize(function(){
+	var wid = $(this).height() * 0.495;
+	$(".wrap").css({"max-width":wid+"px"});
+}).trigger("resize");
