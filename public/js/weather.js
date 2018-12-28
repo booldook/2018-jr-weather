@@ -1,8 +1,10 @@
 //02efdd64bdc14b279bc91d9247db4722
 //api.openweathermap.org/data/2.5/weather?id=2172797
 //api.openweathermap.org/data/2.5/forecast?id=524901
+
 var log = console.log;
 var urlBase = "https://api.openweathermap.org/data/2.5/";
+
 $(".tabs > li").click(function(){
 	var n = $(this).index();
 	$(".tabs > li").css({
@@ -25,6 +27,8 @@ $(".tabs > li").click(function(){
 			url: url,
 			type: "get",
 			dataType: "json",
+			//https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=02efdd64bdc14b279bc91d9247db4722&units=metric    	//daily
+			//https://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=02efdd64bdc14b279bc91d9247db4722&units=metric 		//weekly
 			data: {
 				id: "1835848",
 				appid: "02efdd64bdc14b279bc91d9247db4722",
@@ -52,5 +56,23 @@ function dailyFn(data) {
 }
 
 function weeklyFn(data) {
-	log("weekly"+data);
+	var html = '';
+	var v = '';
+	for(var i in data.list) {
+		v = data.list[i];
+		html = `
+		<ul class="clear">
+			<li><img src="../img/icon/${v.weather[0].icon}.png" class="img"></li>
+			<li class="wk_time"><span>${v.dt_txt}</span></li>
+			<li class="wk_main">
+				<span>날씨:</span> ${v.weather[0].main}(${v.weather[0].description}) 
+			</li>
+			<li class="wk_temp">
+				<span>온도:</span> ${v.main.temp}도 (${v.main.temp_min} / ${v.main.temp_max})</li>
+			<li class="wk_wind"><span>바람:</span> ${v.wind.speed}ms(${v.wind.deg}deg)</li>
+		</ul>
+		`;
+		$(".weekly").append(html);
+	}
 }
+

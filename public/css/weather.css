@@ -1,6 +1,6 @@
 @import 'base.css';
 
-.wrap {width:100%; max-width:482px; height:100%; margin:auto; border:1px solid #999;}
+.wrap {width:100%; max-width:482px; min-height:100%; margin:auto; border:1px solid #f00;}
 .tabs {border-bottom:1px solid #999;}
 .tabs > li {padding:0.75rem; width:50%; float:left; text-align:center;}
 .wrap > div {width:100%; position:relative;}
@@ -13,3 +13,8 @@
 .daily #wt_icon {width:50%;}
 .daily .tit {text-align:right; display:inline-block; width:30%; padding:1em;}
 .daily .cont {text-align:left; display:inline-block; width:60%; padding:1em;}
+
+.weekly > ul {border-bottom:1px solid #999;}
+.weekly > ul > :first-child {width:28%; padding:2%; float:left;}
+.weekly > ul > li:not(:first-child) {float:right; width:72%; padding:1%;}
+.weekly span {color:rgb(30, 56, 172)}
