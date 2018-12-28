@@ -1,6 +1,47 @@
 //02efdd64bdc14b279bc91d9247db4722
 //api.openweathermap.org/data/2.5/weather?id=2172797
 //api.openweathermap.org/data/2.5/forecast?id=524901
+(function checkMobileDevice() {
+	var mobileKeyWords = ['Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson'];
+	for (var i in mobileKeyWords) {
+			if (navigator.userAgent.match(mobileKeyWords[i]) != null) {
+					$(".wrap").css({"background":"none"});
+					$(".tabs").css({
+						 "position":"static",
+							"top":0, 
+							"left":0, 
+							"width":"100%"
+					});
+					$(".wrap > div").css({
+						"position":"relative",
+						"width":"100%",
+						"top":0,  
+						"height":"calc(100% - 3rem)", 
+						"left":0
+					});
+			}
+			else {
+				$(".wrap").css({
+					"background":"url(../img/iphone.png) no-repeat", 
+					"background-size":"auto 100%"
+				});
+				$(".tabs").css({
+					"position":"absolute",
+					"top":"11.2%", 
+					"left":"7.13%", 
+					"width":"86%"
+				});
+				$(".wrap > div").css({
+					"position":"absolute",
+					"width":"86%",
+					"top":"calc(11.2% + 3rem)",  
+					"height":"calc(77.4% - 3rem)", 
+					"left":"7.13%"
+				});
+			}
+	}
+	return false;
+});
 
 var log = console.log;
 var urlBase = "https://api.openweathermap.org/data/2.5/";
