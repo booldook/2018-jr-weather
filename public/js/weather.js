@@ -19,8 +19,8 @@ $(".tabs > li").click(function(){
 		"color":"#fff",
 		"font-weight":"bold"
 	});
-	$(".conts").hide();
-	$(".conts").eq(n).show(function(){
+	$(".conts").hide(0);
+	$(".conts").eq(n).show(0, function(){
 		if(n == 0) url = urlBase + "weather";
 		else url = urlBase + "forecast";
 		$.ajax({
@@ -58,6 +58,7 @@ function dailyFn(data) {
 function weeklyFn(data) {
 	var html = '';
 	var v = '';
+	$(".weekly").empty();
 	for(var i in data.list) {
 		v = data.list[i];
 		html = `
